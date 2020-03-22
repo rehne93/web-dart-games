@@ -1,0 +1,24 @@
+<div class="halveIt">
+  <div style="display: inline-block">
+    <h2 class="mat-display-1 flex-center" style="margin-bottom: 0">Halve It</h2>
+    <fa-icon class="flex-center" [icon]="questionIcon"
+             matTooltip="{{this.ANLEITUNG}}">
+    </fa-icon>
+  </div>
+  <!-- Ausgabe des Momentanen Scores inkl. Eingabefeldes -->
+  <div class="flex-center flex-column margin">
+    <small class="flex-center" style="color: mediumpurple">Momentaner Score</small>
+    <span class="flex-center currentScoreLabel">{{currentScore}}</span>
+  </div>
+  <!--Ausgabe des nächsten, zu treffendem Ziel -->
+  <div class="flex-center flex-column margin">
+    <small class="flex-center" style="color: purple">Nächstes Ziel</small>
+    <span class="flex-center target">{{currentStepObject.value}}</span>
+  </div>
+  <!-- Buttons zum Spiel neustarten bzw. Score eingeben -->
+  <div class="flex-center">
+    <input *ngIf="!finished" [class]="inputScore" [(ngModel)]="inputScore" (keyup.enter)="nextStep()">
+    <button *ngIf="!finished" (click)="nextStep()" mat-fab [color]="'primary'">Eingabe</button>
+    <button *ngIf="finished" (click)="startNewGame()" mat-raised-button [color]="'warn'">Spiel neu starten</button>
+  </div>
+</div>

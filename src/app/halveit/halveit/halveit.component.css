@@ -1,0 +1,37 @@
+.halveIt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.target{
+  font-size: 17rem;
+  color: purple;
+}
+
+.margin{
+  margin-top: 2rem;
+}
+
+.currentScoreLabel {
+  font-size: 3rem;
+  color: mediumpurple;
+}
+
+.inputScore{
+  width: 5rem;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+button {
+  margin-left: 1rem;
+}
