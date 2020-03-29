@@ -1,8 +1,16 @@
-Mulligan
+<div class="mulligan">
+  <div style="display: inline-block; margin-bottom: 2rem">
+    <span class="mat-display-1 flex-center" style="margin-bottom: 0">Mulligan</span>
+    <fa-icon class="flex-center" [icon]="questionIcon"
+             matTooltip="{{this.ANLEITUNG}}">
+    </fa-icon>
+  </div>
 
-<app-number-field></app-number-field>
-<app-number-field></app-number-field>
-<app-number-field></app-number-field>
-<app-number-field></app-number-field>
-<app-number-field></app-number-field>
-<app-number-field></app-number-field>
+  <div class="flex-center" style="flex-wrap: wrap">
+    <ng-container *ngFor="let i of [1,2,3,4,5,6]">
+      <app-number-field style="flex: 0 1 30%; margin: 1rem"></app-number-field>
+    </ng-container>
+    <app-number-field style="flex: 0 1 30%; margin: 1rem" [isBull]="true"></app-number-field>
+  </div>
+  <button mat-button (click)="refresh()">Neustart</button>
+</div>

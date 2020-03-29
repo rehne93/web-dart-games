@@ -4,6 +4,8 @@ import { MulliganComponent } from './mulligan/mulligan.component';
 import { NumberFieldComponent } from './number-field/number-field.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -12,7 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FontAwesomeModule,
+    MatTooltipModule
   ],
   exports:[
     MulliganComponent,
