@@ -17,8 +17,9 @@
   </div>
   <!-- Buttons zum Spiel neustarten bzw. Score eingeben -->
   <div class="flex-center">
-    <input *ngIf="!finished" [class]="inputScore" [(ngModel)]="inputScore" (keyup.enter)="nextStep()">
+    <input type="number" *ngIf="!finished" [class]="inputScore" [(ngModel)]="inputScore" (keyup.enter)="nextStep()">
     <button *ngIf="!finished" (click)="nextStep()" mat-fab [color]="'primary'">Eingabe</button>
     <button *ngIf="finished" (click)="startNewGame()" mat-raised-button [color]="'warn'">Spiel neu starten</button>
   </div>
 </div>
+
