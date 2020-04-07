@@ -25,6 +25,9 @@ export class X01Component implements OnInit {
   }
 
 
+  /**
+   * Gibt eine Fehlermeldung aus, falls der Score invalide ist
+   */
   scoreInput() {
     const isValid = this.x01Data.scoreEntered(this.inputScore, 3);
     if (!isValid) {

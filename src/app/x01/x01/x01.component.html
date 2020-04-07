@@ -1,2 +1,9 @@
-{{x01Data.getScoreLeft()}}
-<input type="number" [(ngModel)]="inputScore" (keyup.enter)="this.scoreInput()">
+<div class="x01">
+  <h2 class="flex-center"> Spiel: {{x01Data.getStartingScore()}}</h2>
+  <small class="flex-center">Punkte übrig</small>
+  <span class="flex-center" style="font-size: 6rem; color: mediumpurple">{{x01Data.getScoreLeft()}}</span>
+  <div class="flex-center">
+    <input style="height: 4rem; width: 9rem; font-size: 3rem;" type="number" [(ngModel)]="inputScore"
+           (keyup.enter)="this.scoreInput()" [min]="0" [max]="180">
+  </div>
+</div>
