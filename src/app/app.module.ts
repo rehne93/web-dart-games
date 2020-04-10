@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {HalveitModule} from './halveit/halveit.module';
 import {AppRoutingModule} from './app-routing.module';
@@ -20,7 +20,8 @@ import { X01Module } from './x01/x01.module';
     AppRoutingModule,
     MatSidenavModule,
     MulliganModule,
-    X01Module
+    X01Module,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
