@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref":"https://rehne93.github.io/web-dart-games/",
             "outputPath": "docs/",
             "index": "src/index.html",
             "main": "src/main.ts",
