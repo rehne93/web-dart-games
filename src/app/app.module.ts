@@ -8,7 +8,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MulliganModule} from './mulligan/mulligan.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { X01Module } from './x01/x01.module';
-
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,9 @@ import { X01Module } from './x01/x01.module';
     MatSidenavModule,
     MulliganModule,
     X01Module,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
