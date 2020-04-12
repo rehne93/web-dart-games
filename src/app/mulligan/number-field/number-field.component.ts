@@ -11,6 +11,8 @@ export class NumberFieldComponent implements OnInit {
 
   @Input() isBull: boolean = false;
 
+  @Input() value: number = 0;
+
   /**
    * Anzuvisierende Nummer
    */
@@ -30,15 +32,10 @@ export class NumberFieldComponent implements OnInit {
     if (this.isBull) {
       this.targetNumber = 25;
       return;
+    } else{
+      this.targetNumber = this.value;
     }
-    const num = Math.floor(Math.random() * 20 + 1);
-    if (!this.mulliganService.numberUsed(num)) {
-      this.targetNumber = num;
-      this.mulliganService.insertNumber(this.targetNumber);
-      return;
-    } else {
-      this.ngOnInit();
-    }
+
   }
 
 
