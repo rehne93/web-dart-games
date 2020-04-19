@@ -1,9 +1,9 @@
 <mat-drawer-container>
-  <mat-drawer style="height: 100%" [opened]="true" [disableClose]="true" [mode]="'side'">
+  <mat-drawer [opened]="true" [disableClose]="true" [mode]="'side'">
     <app-navigation></app-navigation>
   </mat-drawer>
 
-  <mat-drawer-content style="height: 100% !important">
+  <mat-drawer-content style="height: 100vh !important">
     <router-outlet></router-outlet>
   </mat-drawer-content>
 
