@@ -1,12 +1,12 @@
 .dashboard {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
 mat-card{
   cursor: pointer;
+  display: inline-block;
+  width: 25%;
 }
