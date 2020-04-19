@@ -6,4 +6,9 @@
     <input style="height: 4rem; width: 9rem; font-size: 3rem;" type="number" [(ngModel)]="inputScore"
            (keyup.enter)="this.scoreInput()" [min]="0" [max]="180">
   </div>
+  <small class="flex-center">Average: {{x01Data.getAverage() | number}}</small>
+  <small class="flex-center">Runde: {{(x01Data.getDartsThrown() / 3)+1}}</small>
+  <small class="flex-center">Spiel-Nr.: {{this.playedRounds}} </small>
+  <button  class="flex-center" *ngIf="x01Data.isFinished()" (click)="startNewGame()" mat-raised-button [color]="'warn'">Spiel neu starten</button>
+
 </div>

@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {X01Data} from '../x01-data';
-import {Default501} from '../default-501';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { Component, Input, OnInit } from '@angular/core';
+import { X01Data } from '../x01-data';
+import { Default501 } from '../default-501';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-x01',
@@ -14,6 +14,7 @@ export class X01Component implements OnInit {
   @Input() x01Data: X01Data;
 
   inputScore: number;
+  playedRounds = 1;
 
   constructor(private snackBar: MatSnackBar) {
   }
@@ -25,13 +26,22 @@ export class X01Component implements OnInit {
   }
 
 
+  startNewGame() {
+    this.playedRounds++;
+    this.inputScore = null;
+    this.x01Data.restart();
+  }
+
   /**
    * Gibt eine Fehlermeldung aus, falls der Score invalide ist
    */
   scoreInput() {
+    if(this.x01Data.isFinished()){
+      return;
+    }
     const isValid = this.x01Data.scoreEntered(this.inputScore, 3);
     if (!isValid) {
-      this.snackBar.open(this.ERROR_INVALID_SCORE, '', {duration: 3000});
+      this.snackBar.open(this.ERROR_INVALID_SCORE, '', { duration: 3000 });
     } else {
       this.inputScore = null;
 

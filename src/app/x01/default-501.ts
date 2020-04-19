@@ -5,10 +5,15 @@ export class Default501 implements X01Data {
   readonly START_SCORE = 501;
   private scoreLeft: number = this.START_SCORE;
   private dartsThrown: number = 0;
+  private totalScore: number = 0;
+  private totalDartsThrown: number = 0;
 
 
   getAverage(): number {
-    return 0;
+    if(this.totalDartsThrown === 0){
+      return 0;
+    }
+    return this.totalScore/(this.totalDartsThrown/3);
   }
 
   getDartsThrown(): number {
@@ -34,7 +39,9 @@ export class Default501 implements X01Data {
     }
 
     this.scoreLeft -= score;
+    this.totalScore+= score;
     this.dartsThrown += numOfDarts;
+    this.totalDartsThrown += numOfDarts;
     return true;
   }
 
