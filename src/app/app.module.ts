@@ -9,6 +9,7 @@ import {MulliganModule} from './mulligan/mulligan.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { X01Module } from './x01/x01.module';
 import {MatButtonModule} from '@angular/material/button';
+import { DashboardModule } from './dashboard/dashboard.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     X01Module,
     BrowserAnimationsModule,
     MatButtonModule,
+    DashboardModule,
+    
 
   ],
   providers: [],

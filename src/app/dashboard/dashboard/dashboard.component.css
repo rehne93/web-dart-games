@@ -1,0 +1,12 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+
+mat-card{
+  cursor: pointer;
+}
